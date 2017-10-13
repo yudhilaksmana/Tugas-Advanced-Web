@@ -50,6 +50,7 @@
 		?>
 		</select>
 		<input type="submit" name="filter" value="Filter" />
+		<input type="button" name="clear" onclick="window.location.href=window.location.href" value="Clear" />
 	</form>
 </div>
 <div id="search">
@@ -57,6 +58,7 @@
 	<form action="" method="post">
 		<input type="text" name="search_text" />
 		<input type="submit" name="cari" value="Cari" />
+		<input type="button" name="clear" onclick="window.location.href=window.location.href" value="Clear" />
 	</form>
 </div>
 <div id="konten">
