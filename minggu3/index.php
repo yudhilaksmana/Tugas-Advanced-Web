@@ -6,6 +6,11 @@
 		$kat = $_POST['kat'];
 		$query = "SELECT * FROM Kontak INNER JOIN kategori ON kontak.id_kategori = kategori.id_kategori WHERE id_kategori = '$kat'";
 	}
+	elseif (isset($_POST['cari']))
+	{
+		$cari = mysqli_real_escape_string($db, $_POST['search_text']);
+		$query =  "SELECT * FROM kontak INNER JOIN kategori ON kontak.id_kategori = kategori.id_kategori WHERE nama like '%{$cari}%'";
+	}
 	else
 	{
 		$query = "SELECT * FROM Kontak INNER JOIN kategori ON kontak.id_kategori = kategori.id_kategori";
