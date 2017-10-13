@@ -3,8 +3,8 @@
 	
 	if(isset($_POST['filter']))
 	{
-		$kat = $_POST['kat'];
-		$query = "SELECT * FROM Kontak INNER JOIN kategori ON kontak.id_kategori = kategori.id_kategori WHERE id_kategori = '$kat'";
+		$kat = mysqli_real_escape_string($db, $_POST['kategori']);
+		$query = "SELECT * FROM Kontak INNER JOIN kategori ON kontak.id_kategori = kategori.id_kategori WHERE id_kategori = $kat";
 	}
 	elseif (isset($_POST['cari']))
 	{
@@ -38,7 +38,7 @@
 <div id="filter">
 	<b>Filter berdasarkan kategori: </b>
 	<form action="" method="post">
-		<select name='kat'>
+		<select name='kategori'>
 		<?php
 			$q2 = "SELECT * FROM kategori";
 			$h2 = mysqli_query($db, $q2);
