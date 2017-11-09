@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>untitled</title>
-		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-		<div id="header">
-			<h1>Widget Corp</h1>
-		</div>
+<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
 		<div id="main">
 			<div id="navigation">
 				&nbsp;
@@ -22,6 +14,4 @@
 				</ul>
 			</div>
 		</div>
-		<div id="footer">Copyright 20xx, Widget Corp</div>
-	</body>
-</html>
+<?php include ("../includes/layouts/footer.php"); ?>
